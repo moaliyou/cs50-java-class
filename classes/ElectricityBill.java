@@ -32,19 +32,19 @@ public class ElectricityBill{
         this.rateCharge = rateCharge;
     }
 
-    private double getRateCharge(){
+    protected double getRateCharge(){
         return rateCharge;
     }
 
-    private int getLastMonthReadings(){
+    protected int getLastMonthReadings(){
         return lastMonthReadings;
     }
 
-    private int getCurrentMonthReadings(){
+    protected int getCurrentMonthReadings(){
         return currentMonthReadings;
     }
 
-    private int getKilowatt(){
+    protected int getKilowatt(){
         kilowatt = getCurrentMonthReadings() - getLastMonthReadings();
         return kilowatt;
     }
@@ -56,17 +56,5 @@ public class ElectricityBill{
     public double getMonthlyBillAmount(){
         return monthlyBillAmount;
     }
-    
-    public void showMonthlyReport(){
-        System.out.println("\nTHE MONTHLY REPORT DATA\n");
-        
-        System.out.println("Last month readings: " + getLastMonthReadings());
-        System.out.println("Current month readings: " + getCurrentMonthReadings());
-        System.out.println("Kilowatt used: " + getKilowatt() + "kw");
-        System.out.println("Rate charge: $" + getRateCharge());
-        System.out.printf("\nMonthly Bill Amount: $%.2f \n\n", getMonthlyBillAmount());
-        
-    }
-
 
 }
