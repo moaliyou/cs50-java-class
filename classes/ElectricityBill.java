@@ -56,6 +56,17 @@ public class ElectricityBill{
     public double getMonthlyBillAmount(){
         return monthlyBillAmount;
     }
+    
+    public void showMonthlyReport(){
+        System.out.println("\nTHE MONTHLY REPORT DATA\n");
+        
+        System.out.println("Last month readings: " + getLastMonthReadings());
+        System.out.println("Current month readings: " + getCurrentMonthReadings());
+        System.out.println("Kilowatt used: " + getKilowatt() + "kw");
+        System.out.println("Rate charge: $" + getRateCharge());
+        System.out.printf("\nMonthly Bill Amount: $%.2f \n\n", getMonthlyBillAmount());
+        
+    }
 
 
 }

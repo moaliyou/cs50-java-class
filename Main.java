@@ -6,7 +6,7 @@ public class Main{
 
     public static void main(String[] args){
 
-        ElectricityBill firstBill = new ElectricityBill(1217, 1398, 0.39);
+        ElectricityBill firstBill = new ElectricityBill(1298, 1313, 0.39);
         
         // firstBill.setLastMonthReadings(1273);
         // firstBill.setCurrentMonthReadings(1318);
@@ -14,7 +14,9 @@ public class Main{
 
         firstBill.calculateMonthlyBill();
         
-        System.out.printf("$%.2f\n", firstBill.getMonthlyBillAmount());
+        firstBill.showMonthlyReport();
+        
+        // System.out.printf("$%.2f\n", firstBill.getMonthlyBillAmount());
 
     }
 
